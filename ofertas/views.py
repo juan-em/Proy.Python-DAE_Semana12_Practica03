@@ -4,14 +4,6 @@ from rest_framework.response import Response
 from .models import Oferta
 from .serializers import OfertaSerializer
 
-
-class IndexView(APIView):
-
-    def get(self, request):
-        context = {'mensaje': 'servidor activo'}
-        return Response(context)
-
-
 class OfertasView(APIView):
 
     def get(self, request):

@@ -2,9 +2,6 @@ from django.db import models
 
 
 class Oferta(models.Model):
-    JUNIOR = 'junior'
-    SEMISENIOR = 'semisenior'
-    SENIOR = 'senior'
 
     PERFIL_CHOICES = (
         ('FrontEnd', 'FrontEnd'),
@@ -12,9 +9,9 @@ class Oferta(models.Model):
     )
 
     NIVEL_CHOICES = (
-        (JUNIOR, 'Junior'),
-        (SEMISENIOR, 'Semisenior'),
-        (SENIOR, 'Senior')
+        ('junior', 'Junior'),
+        ('semisenior', 'Semisenior'),
+        ('senior', 'Senior')
     )
 
     titulo = models.CharField(max_length=100)
